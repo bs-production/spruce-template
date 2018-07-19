@@ -72,19 +72,19 @@
             </div><!-- end #header -->
 
            <!-- SUPER NAV TOOL -->            
-           <?php
-                $superNav = new nav();
-                $superNav->superMode = 'top';
-                $superNav->superTemplateId = 3;
+        <?php
+            $superNav = new nav();
                 $superNav->superSplitAboutWork = true;
+                $superNav->superMode = 'top';
                 $superNav->superItems = array(
                     'Services' => array(
                         'target' => 'services'
                     ),
+                    'Reviews' => 159326,
                     'Our Work' => array(
                         'target' => 'work'
                     ),
-                    3780 => array(
+                    159322 => array(
                         'target' => 'about',
                         'show_about_link' => true
                     ),
@@ -96,8 +96,9 @@
                         'target' => 'contact'
                     )
                 );
+
                 echo $superNav->generateSuperMarkup();
-                ?>
+        ?>
         <!-- END SUPER NAV TOOL -->    
 
 
