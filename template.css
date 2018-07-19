@@ -50,9 +50,6 @@ h1, h2, h3, h4, h5, h6, #content-wrap h1, #content-wrap h2, #content-wrap h3, #c
 #content-wrap h5, h5 {
  color: <%= primaryDarkColor %>;
 }
-#content-wrap ul, #content-wrap ol {
-	padding: 0px 20px;
-}
 .home h2, .home p.home-section-title {
 	font: bold 2.0em/1.5 PLEASE UPDATE THIS FONT;
 	text-transform: uppercase;
@@ -64,7 +61,63 @@ h1, h2, h3, h4, h5, h6, #content-wrap h1, #content-wrap h2, #content-wrap h3, #c
 	font-size: 1em;
 	line-height: 1.6;
 }
+ul.arrows li:before {
+	color: <%= primaryBrightColor %>;
+	font-family: FontAwesome;
+	content: "\f058";
+	font-weight: 900;
+	padding-right: 5px;
+	margin-left: -1.3em;
+	margin-top: -3px;
+	font-size: 1.3em;
+	float: left;
+	position: absolute;
+}
+ul.checks li:before {
+	color: <%= primaryBrightColor %>;
+	font-family: FontAwesome;
+	content: "\f14a";
+	font-weight: 900;
+	padding-right: 5px;
+	margin-left: -1.3em;
+	margin-top: -3px;
+	font-size: 1.3em;
+	float: left;
+	position: absolute;
+}
+ul.left.arrows,  ul.left.arrows,  ul.left {
+	max-width: 50%;
+}
+ul.checks li,  ul.arrows li {
+	background: none;
+	padding: 3px 0;
+}
+#content-wrap ul,  #content-wrap ol,  ul.checks,  ol.checks,  ul.arrows,  ol.arrows {
+	padding: 0px 20px !important;
+	margin: 0 0 0 1.1rem;
+	list-style: none;
+}
+ul.checks,  ol.checks,  ul.arrows,  ol.arrows {
+	margin: 0 0 0 1.1rem;
+	list-style: none;
+}
+.home h2,  .home p.home-section-title {
+	font: bold 28px/1.3em sans-serif;
+	text-transform: uppercase;
+	color: #999;
+	text-align: center;
+	margin-bottom: 30px;
+}
+.breakout p,  .breakout ul,  .breakout ol {
+	font-size: 14px;
+	line-height: 20px;
+}
 
+@media screen and (max-width:960px) {
+ul.left.arrows,  ul.left.arrows,  ul.left {
+	max-width: 100%;
+}
+}
 @media screen and (max-width: 640px) {
 p.home-section-title, #content-wrap h1 {
 	font-size: 2em;
@@ -214,6 +267,9 @@ p#header-service-area {
 }
 ul#top-nav-list > li:hover {
  background: <%= primaryBrightColor %>;
+}
+ul#top-nav-list > li.quote:hover a{
+color: #fff;
 }
 /* Top Nav Links */
 ul#top-nav-list > li a {
