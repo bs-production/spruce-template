@@ -3,7 +3,7 @@
 body {
 }
 .row {
-	max-width: 1060px;
+	max-width: 1170px;
 	position: relative;
 }
 #colorbox, #cboxLoadedContent, #cboxContent {
@@ -101,30 +101,18 @@ ul.checks,  ol.checks,  ul.arrows,  ol.arrows {
 	margin: 0 0 0 1.1rem;
 	list-style: none;
 }
-.home h2,  .home p.home-section-title {
-	font: bold 28px/1.3em sans-serif;
-	text-transform: uppercase;
-	color: #999;
-	text-align: center;
-	margin-bottom: 30px;
-}
-.breakout p,  .breakout ul,  .breakout ol {
-	font-size: 14px;
-	line-height: 20px;
-}
-
 @media screen and (max-width:960px) {
 ul.left.arrows,  ul.left.arrows,  ul.left {
 	max-width: 100%;
 }
 }
 @media screen and (max-width: 640px) {
-p.home-section-title, #content-wrap h1 {
+p.home-section-title, #content-wrap h1, h1 {
 	font-size: 2em;
 	line-height: 1.2em;
 	margin-bottom: 10px;
 }
-#content-wrap h2 {
+#content-wrap h2, h2 {
 	font-size: 1.575em;
 	margin: 10px 0;
 	line-height: 1.2em;
@@ -616,12 +604,6 @@ p.more-assets a:hover {
 	background-position: center;
  border-bottom: 1px solid <%= primaryDarkColor %>;
 }
-
-@media screen and (max-width: 640px) {
-#silo-header {
-	height: 120px;
-}
-}
 #silo-header::before {
 	content: "";
 	display: block;
@@ -647,6 +629,9 @@ p.more-assets a:hover {
 #silo-header .page-title {
 	margin-top: 30px;
 	line-height: 1.0em;
+}
+	#silo-header {
+	display:none;
 }
 }
 /* Silo headers */
@@ -1162,14 +1147,7 @@ li.footer-link.about, li.footer-link.work, li.footer-link.services li:nth-child(
 	opacity: 1;
 }
 @media screen and (min-width: 1025px) {
-#footer > .row > div:nth-child(1) {
-	border-left: 1px solid #4c4c4c;
-}
-#footer > .row > div:nth-child(2) {
-	border-right: 1px solid #212121;
-}
 #footer-links, #footer-contact {
-	min-height: 525px;
 	overflow: hidden;
 }
 #footer-contact {
@@ -1180,12 +1158,6 @@ li.footer-link.about, li.footer-link.work, li.footer-link.services li:nth-child(
 }
 }
 @media screen and (max-width: 1024px) {
-#footer > .row > div:nth-child(1) {
-	border-bottom: 1px solid #212121;
-}
-#footer > .row > div:nth-child(2) {
-	border-top: 1px solid #4c4c4c;
-}
 #footer-contact {
 	margin-top: 50px;
 }
