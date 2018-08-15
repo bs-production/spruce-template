@@ -113,7 +113,36 @@
 
                             </div>
                         </div><!-- /#main-message -->
+                    <!-- SLIDER MAIN MESSAGE -->
+                    <!--<div class="container" id="main-message">
+	<div class="main-slide slide1">
+		<div class="row">
+			<div class="medium-10 medium-offset-1 end columns main-text">
+				<p>Your Title here</p>
+			</div>
+		</div>
+	</div>
+	<div class="main-slide slide2">
+		<div class="row">
+			<div class="medium-10 medium-offset-1 end columns main-text">
+				<p>Your Title here</p>
+			</div>
+		</div>
+	</div>
+</div>  end main message -->
+<!-- <div class="container" id="main-cta">
+	<div class="row">
+		<div class="large-7 columns">
+			<p>expert waterproofing &amp; foundation<span>specialists you can trust</span>
+			</p>
+		</div>
+		<div class="large-5 columns">
+			<a class="button" href="/free-estimate.html" title="Contact us for a Free Quote">Contact us for a Free Quote</a>
+		</div>
+	</div>
+</div> end main call to action -->
                     
+                    <!-- END SLIDER MAIN MESSAGE -->
               
                         <div class="container" id="homepage-content">
 
@@ -391,6 +420,22 @@
                 }
             ]
             });
+                    $('#main-message').slick({
+                            autoplay: false,
+                            dots: false,
+                            infinite: true,
+                            speed: 500,
+                            fade: false,
+                            cssEase: 'ease',
+                            responsive: [
+                                {
+                                  breakpoint: 640,
+                                  settings: {
+                                    arrows: false
+                                  }
+                                }
+                            ]
+                        });   
      </script>
 
 <?php
