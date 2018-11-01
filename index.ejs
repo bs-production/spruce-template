@@ -1,4 +1,25 @@
 <!doctype html>
+<?php
+    $fullpage = array ("opinion",
+        "sitemap",
+        "refer",
+        "maintenance",
+        "payment",
+        "thank-you",
+        "email",
+        "opinion-service",
+        "energy-review",
+        "crew-review",
+        "free-estimate",
+        "free-estimate/confirmation",
+        "survey",
+        "privacy-policy",
+        "search",
+        "additional-comments",
+        "mitigation-survey",
+        "testing-survey",
+        "service-area");
+?>
 <html lang="en">
     <head>
     	<meta charset="utf-8">
@@ -7,7 +28,7 @@
     	<meta name="description" content="[[description]]">
     	<meta name="keywords" content="[[keywords]]">
     	<link rel="icon" href="<%- favicon %>">
-          [[custom_core_v3]]
+        [[custom_core_v3]]
 </head>
 
 
@@ -16,7 +37,7 @@
             <div class="container" id="header">
                 <div class="row" data-equalizer>
                     <div class="large-5 columns" id="logo" data-equalizer-watch>
-                         <a href="/"><img src="<%- logo %>" alt="[company]"></a>
+                        <a href="/"><img src="<%- logo %>" alt="[company]"></a>
                     </div>
                     <div class="large-7 columns" id="contact" data-equalizer-watch>
                         <div class="row collapse" id="header-service-wrap">
@@ -71,7 +92,7 @@
                 </div>
             </div><!-- end #header -->
 
-           <!-- SUPER NAV TOOL -->            
+        <!-- SUPER NAV TOOL -->
         <?php
             $superNav = new nav();
                 $superNav->superSplitAboutWork = true;
@@ -96,351 +117,347 @@
                         'target' => 'contact'
                     )
                 );
-
                 echo $superNav->generateSuperMarkup();
         ?>
-        <!-- END SUPER NAV TOOL -->    
+        <!-- END SUPER NAV TOOL -->
 
 
-                <?php if ($thePage == "index") { ?>
+        <?php if ($thePage == "index") { ?>
 
-                        <div class="container" id="main-message">
-                            <div class="row">
-                              <div class="columns hero-txt main-txt">
-                                <p><%= mainMessageText %> <span><%= mainMessageSubtext %></span></p>
-                                <a class="cta-button" href="/free-estimate.html">Schedule A Free Estimate</a>
-                              </div>
+            <div class="container" id="main-message">
+                <div class="row">
+                    <div class="columns hero-txt main-txt">
+                        <p><%= mainMessageText %> <span><%= mainMessageSubtext %></span></p>
+                        <a class="cta-button" href="/free-estimate.html">Schedule A Free Estimate</a>
+                    </div>
 
-                            </div>
-                        </div><!-- /#main-message -->
-                    <!-- SLIDER MAIN MESSAGE -->
-                    <!--<div class="container" id="main-message">
-	<div class="main-slide slide1">
-		<div class="row">
-			<div class="medium-10 medium-offset-1 end columns main-text">
-				<p>Your Title here</p>
-			</div>
-		</div>
-	</div>
-	<div class="main-slide slide2">
-		<div class="row">
-			<div class="medium-10 medium-offset-1 end columns main-text">
-				<p>Your Title here</p>
-			</div>
-		</div>
-	</div>
-</div>  end main message -->
-<!-- <div class="container" id="main-cta">
-	<div class="row">
-		<div class="large-7 columns">
-			<p>expert waterproofing &amp; foundation<span>specialists you can trust</span>
-			</p>
-		</div>
-		<div class="large-5 columns">
-			<a class="button" href="/free-estimate.html" title="Contact us for a Free Quote">Contact us for a Free Quote</a>
-		</div>
-	</div>
-</div> end main call to action -->
-                    
-                    <!-- END SLIDER MAIN MESSAGE -->
-              
-                        <div class="container" id="homepage-content">
+                </div>
+            </div><!-- /#main-message -->
+            <!-- SLIDER MAIN MESSAGE -->
+            <!--<div class="container" id="main-message">
+                <div class="main-slide slide1">
+                    <div class="row">
+                        <div class="medium-10 medium-offset-1 end columns main-text">
+                            <p>Your Title here</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="main-slide slide2">
+                    <div class="row">
+                        <div class="medium-10 medium-offset-1 end columns main-text">
+                            <p>Your Title here</p>
+                        </div>
+                    </div>
+                </div>
+            </div>  end main message -->
+            <!-- <div class="container" id="main-cta">
+                <div class="row">
+                    <div class="large-7 columns">
+                        <p>expert waterproofing &amp; foundation<span>specialists you can trust</span>
+                        </p>
+                    </div>
+                    <div class="large-5 columns">
+                        <a class="button" href="/free-estimate.html" title="Contact us for a Free Quote">Contact us for a Free Quote</a>
+                    </div>
+                </div>
+            </div> end main call to action -->
+            <!-- END SLIDER MAIN MESSAGE -->
+
+            <div class="container" id="homepage-content">
 
             <?php
             }
-            elseif ((stristr($thePage,"free-estimate")) || ($isCityPage == true) || (stristr($thePage,"service-area")))
+            elseif ( (in_array($thePage, $fullpage)) || ($isCityPage == true) )
             {
             ?>
-                <div class="container" id="page-wrap">
-                  <div class="row">
-                      <div class="columns full-width" id="content-wrap">
+            <div class="container" id="page-wrap">
+                <div class="row">
+                    <div class="columns full-width" id="content-wrap">
             <?php
             }
             else
             {
-            ?>
-            <?php
             if (stristr($thePage,"about-us"))
             {
             ?>
-                <div id="about" class="silo-page-wrap">
+            <div id="about" class="silo-page-wrap">
             <?php
             }
             elseif (stristr($thePage,"spray-foam-insulation"))
             {
             ?>
-                <div id="spray-foam" class="silo-page-wrap">
+            <div id="spray-foam" class="silo-page-wrap">
             <?php
             }
             elseif (stristr($thePage,"attic-insulation"))
             {
             ?>
-                <div id="attic-insulation" class="silo-page-wrap">
+            <div id="attic-insulation" class="silo-page-wrap">
             <?php
             }
             elseif (stristr($thePage,"ice-damming"))
             {
             ?>
-                <div id="ice-damming" class="silo-page-wrap">
+            <div id="ice-damming" class="silo-page-wrap">
             <?php
             }
             elseif (stristr($thePage,"crawl-space-insulation"))
             {
             ?>
-                <div id="crawl-space-insulation" class="silo-page-wrap">
+            <div id="crawl-space-insulation" class="silo-page-wrap">
             <?php
             }
             elseif (stristr($thePage,"home-insulation"))
             {
             ?>
-                <div id="home-insulation" class="silo-page-wrap">
+            <div id="home-insulation" class="silo-page-wrap">
             <?php
             }
             elseif (stristr($thePage,"windows-doors"))
             {
             ?>
-                <div id="windows-doors" class="silo-page-wrap">
+            <div id="windows-doors" class="silo-page-wrap">
             <?php
             }
             elseif (stristr($thePage,"indoor-air-quality"))
             {
             ?>
-                <div id="indoor-air-quality" class="silo-page-wrap">
+            <div id="indoor-air-quality" class="silo-page-wrap">
             <?php
             }
             elseif (stristr($thePage,"home-energy-evaluation"))
             {
             ?>
-                <div id="home-energy-evaluation" class="silo-page-wrap">
+            <div id="home-energy-evaluation" class="silo-page-wrap">
             <?php
             }
             elseif (stristr($thePage,"roof-repair"))
             {
             ?>
-                <div id="roof-repair" class="silo-page-wrap">
+            <div id="roof-repair" class="silo-page-wrap">
             <?php
             }
             elseif (stristr($thePage,"roof-replacement"))
             {
             ?>
-                <div id="roof-replacement" class="silo-page-wrap">
+            <div id="roof-replacement" class="silo-page-wrap">
             <?php
             }
             elseif (stristr($thePage,"commercial-roofing"))
             {
             ?>
-                <div id="commercial-roofing" class="silo-page-wrap">
+            <div id="commercial-roofing" class="silo-page-wrap">
             <?php
             }
             elseif (stristr($thePage,"gutters-and-downspouts"))
             {
             ?>
-                <div id="gutters-and-downspouts" class="silo-page-wrap">
+            <div id="gutters-and-downspouts" class="silo-page-wrap">
             <?php
             }
             elseif (stristr($thePage,"siding"))
             {
             ?>
-                <div id="siding" class="silo-page-wrap">
+            <div id="siding" class="silo-page-wrap">
             <?php
             }
             elseif (stristr($thePage,"windows-doors"))
             {
             ?>
-                <div id="windows-doors" class="silo-page-wrap">
+            <div id="windows-doors" class="silo-page-wrap">
             <?php
             }
             elseif (stristr($thePage,"remodeling"))
             {
             ?>
-                <div id="remodeling" class="silo-page-wrap">
+            <div id="remodeling" class="silo-page-wrap">
             <?php
             }
             elseif (stristr($thePage,"service-area"))
             {
             ?>
-                <div id="territory" class="silo-page-wrap">
+            <div id="territory" class="silo-page-wrap">
             <?php
             }
             else
             {
             ?>
-                <div id="about" class="silo-page-wrap">
+            <div id="about" class="silo-page-wrap">
             <?php
             }
             ?>
-                  <div class="container" id="silo-header">
-                      <div class="row">
-                          <div class="columns">
-                              <span class="page-title"><?php echo $cmsPageData['page.name']; ?></span>
-                          </div>
-                      </div>
-                  </div><!-- end #silo-header -->
-                  <div class="container" id="page-wrap">
-                      <div class="row">
-                          <div class="medium-9 medium-push-3 columns body" id="content-wrap">
+                <div class="container" id="silo-header">
+                    <div class="row">
+                        <div class="columns">
+                            <span class="page-title"><?php echo $cmsPageData['page.name']; ?></span>
+                        </div>
+                    </div>
+                </div><!-- end #silo-header -->
+                <div class="container" id="page-wrap">
+                    <div class="row">
+                        <div class="medium-9 medium-push-3 columns body" id="content-wrap">
             <?php
             }
             ?>
                             [[content]]
-                          </div>
-            <?php if (($thePage != "index") && ($thePage != "service-area") && ($isCityPage == 0) && ($thePage != "free-estimate") && ($thePage != "free-estimate/confirmation"))
-           { ?>
-                <div class="medium-3 medium-pull-9 columns" id="subnav-left">
-                    [[single_silo_nav]]
-                </div>
+            <?php if ($thePage == "index") { ?>
+            </div>
             <?php
             }
-            ?>
-                  
-            <?php if ($thePage != "index") { ?>
-                        </div>
-                    </div>
-            <?php
-            }
-            ?>
-
-            <?php if (($thePage != "index") && ($thePage != "service-area") && ($isCityPage == 0) && ($thePage != "free-estimate") && ($thePage != "free-estimate/confirmation"))
+            elseif ( (in_array($thePage, $fullpage)) || ($isCityPage == true) )
             { ?>
-                </div><!-- end #silo-page-wrap -->
+                    </div><!-- end #content-wrap -->
+                </div><!-- end .row -->
+            </div><!-- end #page-wrap -->
+            <?php
+            }
+            else
+            { ?>
+                        </div><!-- end #content-wrap (silo content column) -->
+                        <div class="medium-3 medium-pull-9 columns" id="subnav-left">
+                            [[single_silo_nav]]
+                        </div>
+                    </div><!-- end .row -->
+                </div><!-- end #page-wrap -->
+            </div><!-- end #silo-page-wrap -->
             <?php
             }
             ?>
 
 
-              <?php if (($thePage != "service-area") && ($isCityPage == 0) && ($thePage != "free-estimate")) { ?>
 
-                <div class="container home" id="service-area">
-                    <div class="container home" id="home-city-list-wrap">
-                        <div class="row collapse">
-                            <div class="large-3 columns">
-                                <div id="home-city-list">
-                                    <p class="home-section-title">our service area</p>
-                                   [[city_scroll:50]]
-                                </div>
+            <?php if ( (!in_array($thePage, $fullpage)) && ($isCityPage == 0) ) { ?>
+
+            <div class="container home" id="service-area">
+                <div class="container home" id="home-city-list-wrap">
+                    <div class="row collapse">
+                        <div class="large-3 columns">
+                            <div id="home-city-list">
+                                <p class="home-section-title">our service area</p>
+                                [[city_scroll:50]]
                             </div>
                         </div>
                     </div>
-                    <div class="container home" id="service-map">
-                            <div id="gmap-wrap">[[service_area_google_map]]</div>
-                    </div>
-                </div><!-- end #service-area -->
+                </div>
+                <div class="container home" id="service-map">
+                        <div id="gmap-wrap">[[service_area_google_map]]</div>
+                </div>
+            </div><!-- end #service-area -->
 
-              <?php
-              }
-              ?>
+            <?php
+            }
+            ?>
 
             <?php if (($thePage == "index")) { ?>
 
-                    <div class="container" id="cred">
-                        <?php
-                              $meta = array();
-                                  $meta['useGeo'] = true;
-                                  $meta['manualAssetPage'] = false;
-                                  $meta['useFeatured'] = false;
-                                  $meta['siloMode'] = false;
-                                  $meta['qty'] = 20;
-                                  $meta['template'] = 5493;
-                              $templates = array();
-                              $templates['main'] = array('
-                                  <div class="row" id="inline-affil-slider">                                        
-                                          <%- BBBcode %>
-                                          [[items]]
-                                  </div>');
-                                $templates['item'] = array('
-                                  <div class="columns widget-item">
-                                      <div class="widget-affil-img">
-                                          [[logo]]
-                                      </div>
-                                  </div>');
-                              $title = 'Affiliations';
-                              require_once('widgets/affiliations_sidebar_widget.php');
-                              echo($output);
-                          ?>
-                    </div><!-- end credibility -->
+            <div class="container" id="cred">
+                <?php
+                    $meta = array();
+                        $meta['useGeo'] = true;
+                        $meta['manualAssetPage'] = false;
+                        $meta['useFeatured'] = false;
+                        $meta['siloMode'] = false;
+                        $meta['qty'] = 20;
+                        $meta['template'] = 5493;
+                    $templates = array();
+                    $templates['main'] = array('
+                        <div class="row" id="inline-affil-slider">
+                            <%- BBBcode %>
+                            [[items]]
+                        </div>');
+                    $templates['item'] = array('
+                        <div class="columns widget-item">
+                            <div class="widget-affil-img">
+                                [[logo]]
+                            </div>
+                        </div>');
+                    $title = 'Affiliations';
+                    require_once('widgets/affiliations_sidebar_widget.php');
+                    echo($output);
+                ?>
+            </div><!-- end credibility -->
 
-                    <?php
-                    }
-                    ?>
+            <?php
+            }
+            ?>
 
             <div class="container home" id="footer">
                 <div class="row" data-equalizer>
                     <div class="large-7 large-push-5 columns" data-equalizer-watch>
                         <div id="footer-links">
-                          <?php
-                          $superNav = new nav();
-                          $superNav->superMode = 'bottom';
-                          echo $superNav->generateSuperMarkup();
-                          ?>
-                           [[social_footer]]
+                            <?php
+                            $superNav = new nav();
+                            $superNav->superMode = 'bottom';
+                            echo $superNav->generateSuperMarkup();
+                            ?>
+                            [[social_footer]]
                         </div>
                     </div>
                     <div class="large-5 large-pull-7 columns" data-equalizer-watch>
                         <div id="footer-contact">
                             <a href="/free-estimate.html" id="footer-btn">get a free quote</a>
                             <p class="footer-phone">
-                              Or call us at
+                                Or call us at
                                 <span><a href="tel:<?php echo $phonenumber; ?>" class="phone_link">[phone]</a></span>
                             </p>
                             <p class="footer-address">
                                 &copy; <?php echo(date('Y')); ?> [[display_addresses]] </p>
-                              <p>
+                                <p>
                                 Contractor ID: [license number]
-                              </p>
-                              <p>[[cn-logo]] 
-                              </p>
+                                </p>
+                                <p>[[cn-logo]]
+                                </p>
                         </div>
                     </div>
                 </div>
             </div>
             <a id="scrollToTop"><i class="fa fa-arrow-up" aria-hidden="true"></i>Top</a>
-        </div>
+        </div><!-- end template-wrap -->
 
- [[custom_core_v3_js]]
- 
- <?php if (($thePage == "index")) { ?>
+        [[custom_core_v3_js]]
 
-    <script>
-        $('#inline-affil-slider').slick({
-            autoplay: true,
-            arrows: true,
-            infinite: true,
-            speed: 1000,
-            cssEase: 'ease',
-            slidesToShow: 3,
-            slidesToScroll: 3,
-            responsive: [
-                {
-                breakpoint: 640,
-                settings: {
-                    speed: 500,
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-                }
-            ]
+        <?php if (($thePage == "index")) { ?>
+
+        <script>
+            $('#inline-affil-slider').slick({
+                autoplay: true,
+                arrows: true,
+                infinite: true,
+                speed: 1000,
+                cssEase: 'ease',
+                slidesToShow: 3,
+                slidesToScroll: 3,
+                responsive: [
+                    {
+                    breakpoint: 640,
+                    settings: {
+                        speed: 500,
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                    }
+                ]
             });
-                    $('#main-message').slick({
-                            autoplay: false,
-                            dots: false,
-                            infinite: true,
-                            speed: 500,
-                            fade: false,
-                            cssEase: 'ease',
-                            responsive: [
-                                {
-                                  breakpoint: 640,
-                                  settings: {
-                                    arrows: false
-                                  }
-                                }
-                            ]
-                        });   
-     </script>
+            $('#main-message').slick({
+                autoplay: false,
+                dots: false,
+                infinite: true,
+                speed: 500,
+                fade: false,
+                cssEase: 'ease',
+                responsive: [
+                    {
+                        breakpoint: 640,
+                        settings: {
+                        arrows: false
+                        }
+                    }
+                ]
+            });
+        </script>
 
-<?php
-}
-?>
- 
+        <?php
+        }
+        ?>
     </body>
 </html>
