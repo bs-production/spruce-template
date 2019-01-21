@@ -33,15 +33,15 @@
 
 
     <body>
-        <div id="template-wrap">
+        <div id="template-wrap" class="slim-header">
             <div class="container" id="header">
                 <div class="row" data-equalizer>
-                    <div class="large-5 columns" id="logo" data-equalizer-watch>
+                    <div class="small-6 medium-4 columns" id="logo" data-equalizer-watch>
                         <a href="/"><img src="<%- logo %>" alt="[company]"></a>
                     </div>
-                    <div class="large-7 columns" id="contact" data-equalizer-watch>
+                    <div class="small-12 medium-8 columns" id="contact" data-equalizer-watch>
                         <div class="row collapse" id="header-service-wrap">
-                            <div class="large-9 large-offset-3 columns" id="header-service-area">
+                            <div class="columns medium-8 medium-offset-4" id="header-service-area">
                                 <p onclick="location.href='/service-area.html';" style="cursor:pointer;">Serving [territory], [major cities 3]</p>
                             </div>
                         </div>
@@ -82,7 +82,7 @@
                                 </a>
                             </div>
                         </div>
-                        <div class="row collapse">
+                        <div class="row collapse hide-for-small">
                             <div class="columns" id="header-btn">
                                 <a class="button" href="/free-estimate.html">or <span>Contact Us Online</span></a>
                             </div>
@@ -95,6 +95,7 @@
         <!-- SUPER NAV TOOL -->
         <?php
             $superNav = new nav();
+                $superNav->superTemplateId = 3;
                 $superNav->superSplitAboutWork = true;
                 $superNav->superMode = 'top';
                 $superNav->superItems = array(
@@ -124,44 +125,47 @@
 
         <?php if ($thePage == "index") { ?>
 
-            <div class="container" id="main-message">
-                <div class="row">
-                    <div class="columns hero-txt main-txt">
-                        <p><%= mainMessageText %> <span><%= mainMessageSubtext %></span></p>
-                        <a class="cta-button" href="/free-estimate.html">Schedule A Free Estimate</a>
-                    </div>
-
-                </div>
-            </div><!-- /#main-message -->
-            <!-- SLIDER MAIN MESSAGE -->
-            <!--<div class="container" id="main-message">
-                <div class="main-slide slide1">
+            
+            <!-- MAIN MESSAGE 
+            .....
+            .....
+            For Static = id="main-message"
+            and only 1 instance of div.main-content 
+            .....
+            OR
+            .....
+            For Slider = id="main-message-slider"
+            and duplicate div.main-content for # of slides
+            ......
+            .....
+            -->
+            <div class="container" id="main-message-slider">
+                <div class="main-content" style="background-image: url(<%- mainMessageImage %>);">
                     <div class="row">
-                        <div class="medium-10 medium-offset-1 end columns main-text">
-                            <p>Your Title here</p>
+                        <div class="columns main-txt">
+                            <p><%= mainMessageText %> <span><%= mainMessageSubtext %></span></p>
+                            <a class="cta-button" href="/free-estimate.html">Schedule A Free Estimate</a>
                         </div>
                     </div>
                 </div>
-                <div class="main-slide slide2">
+                <div class="main-content" style="background-image: url(<%- mainMessageImage %>);">
                     <div class="row">
-                        <div class="medium-10 medium-offset-1 end columns main-text">
-                            <p>Your Title here</p>
+                        <div class="columns main-txt">
+                            <p><%= mainMessageText %> <span><%= mainMessageSubtext %></span></p>
+                            <a class="cta-button" href="/free-estimate.html">Schedule A Free Estimate</a>
                         </div>
                     </div>
                 </div>
-            </div>  end main message -->
-            <!-- <div class="container" id="main-cta">
-                <div class="row">
-                    <div class="large-7 columns">
-                        <p>expert waterproofing &amp; foundation<span>specialists you can trust</span>
-                        </p>
-                    </div>
-                    <div class="large-5 columns">
-                        <a class="button" href="/free-estimate.html" title="Contact us for a Free Quote">Contact us for a Free Quote</a>
+                <div class="main-content" style="background-image: url(<%- mainMessageImage %>);">
+                    <div class="row">
+                        <div class="columns main-txt">
+                            <p><%= mainMessageText %> <span><%= mainMessageSubtext %></span></p>
+                            <a class="cta-button" href="/free-estimate.html">Schedule A Free Estimate</a>
+                        </div>
                     </div>
                 </div>
-            </div> end main call to action -->
-            <!-- END SLIDER MAIN MESSAGE -->
+            </div>
+            <!-- END MAIN MESSAGE -->
 
             <div class="container" id="homepage-content">
 
@@ -314,8 +318,10 @@
             else
             { ?>
                         </div><!-- end #content-wrap (silo content column) -->
-                        <div class="medium-3 medium-pull-9 columns" id="subnav-left">
-                            [[single_silo_nav]]
+                        <div class="medium-3 medium-pull-9 columns subnav-bg">
+                            <div id="subnav-left">
+                                [[single_silo_nav]]
+                            </div>
                         </div>
                     </div><!-- end .row -->
                 </div><!-- end #page-wrap -->
@@ -413,12 +419,48 @@
             </div>
             <a id="scrollToTop"><i class="fa fa-arrow-up" aria-hidden="true"></i>Top</a>
         </div><!-- end template-wrap -->
-
+        <!-- Fixed Mobile Footer -->
+        <div class="row" id="fixed-contact">
+            <div class="columns area-btn">
+            <a href="/service-area.html">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>Service Area</span>
+            </a>
+            </div>
+            <div class="columns phone-btn">
+            <a title="[[company]]" href="tel:<?php echo $phonenumber; ?>">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+            </a>
+            </div>
+            <div class="columns quote-btn">
+            <a href="/free-estimate.html">
+                <i class="fa fa-file-text" aria-hidden="true"></i>
+                <span>Free Quote</span>
+            </a>
+            </div>
+        </div>
+        <!-- / Fixed Mobile Footer -->
         [[custom_core_v3_js]]
 
         <?php if (($thePage == "index")) { ?>
 
         <script>
+            $('#main-message-slider').slick({
+                autoplay: false,
+                dots: true,
+                infinite: true,
+                speed: 500,
+                fade: true,
+                cssEase: 'ease',
+                responsive: [
+                    {
+                        breakpoint: 640,
+                        settings: {
+                        arrows: false
+                        }
+                    }
+                ]
+            });
             $('#inline-affil-slider').slick({
                 autoplay: true,
                 arrows: true,
@@ -435,22 +477,6 @@
                         slidesToShow: 1,
                         slidesToScroll: 1
                     }
-                    }
-                ]
-            });
-            $('#main-message').slick({
-                autoplay: false,
-                dots: false,
-                infinite: true,
-                speed: 500,
-                fade: false,
-                cssEase: 'ease',
-                responsive: [
-                    {
-                        breakpoint: 640,
-                        settings: {
-                        arrows: false
-                        }
                     }
                 ]
             });
