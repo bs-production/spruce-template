@@ -317,17 +317,19 @@ ul#top-nav-list ul.m-menu ul a:hover {
     text-decoration:none !important;
 }
 /* Nav Template 3 dropdown position fixes */
-    .m-menu-ul > li {
-        padding-right:40px;
-    }
-    .top-bar-section li.has-dropdown:not(:first-of-type) {
-        position:relative;
-    }
     @media screen and (min-width:1025px) {
         ul#top-nav-list ul.m-menu.short {
             min-width:300px;
             width:300px;
             left:0;
+        }
+    }
+    @media screen and (min-width:641px){
+        .m-menu-ul > li {
+            padding-right:40px;
+        }
+        .top-bar-section li.has-dropdown:not(:first-of-type) {
+            position:relative;
         }
     }
 /* Top Banner Sticky Phone # and Button*/
