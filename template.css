@@ -301,6 +301,9 @@ ul#top-nav-list > li.quote:hover {
     background-color:#EB0209;
 }
 @media screen and (max-width:640px) {
+    .top-bar-section .has-dropdown>a:after {
+        border-left-color: rgba(0,0,0,.5);
+    }
     ul#top-nav-list > li.quote a {
          background-color:<%= primaryBrightColor %>;
     }
