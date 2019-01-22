@@ -177,6 +177,11 @@ ol.arrows {
 #contact {
     position:relative;
 }
+#contact > div {
+    position: relative;
+    transform: translateY(-50%);
+    top: 50%;
+}
 #phone {
     font-family:inherit;
     position:relative;
