@@ -126,37 +126,21 @@
         <?php if ($thePage == "index") { ?>
 
             
-            <!-- MAIN MESSAGE 
+            <!-- MAIN MESSAGE is Static by default
             .....
             .....
-            For Static = id="main-message"
+            Static: id="main-message"
             and only 1 instance of div.main-content 
             .....
             OR
             .....
-            For Slider = id="main-message-slider"
+            Slider = id="main-message-slider"
             and duplicate div.main-content for # of slides
             ......
             .....
             -->
-            <div class="container" id="main-message-slider">
-                <div class="main-content" style="background-image: url(<%- mainMessageImage %>);">
-                    <div class="row">
-                        <div class="columns main-txt">
-                            <p><%= mainMessageText %> <span><%= mainMessageSubtext %></span></p>
-                            <a class="cta-button" href="/free-estimate.html">Schedule A Free Estimate</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="main-content" style="background-image: url(<%- mainMessageImage %>);">
-                    <div class="row">
-                        <div class="columns main-txt">
-                            <p><%= mainMessageText %> <span><%= mainMessageSubtext %></span></p>
-                            <a class="cta-button" href="/free-estimate.html">Schedule A Free Estimate</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="main-content" style="background-image: url(<%- mainMessageImage %>);">
+            <div class="container" id="main-message">
+                <div class="main-content" style="background-image: url('<%- mainMessageImage %>');">
                     <div class="row">
                         <div class="columns main-txt">
                             <p><%= mainMessageText %> <span><%= mainMessageSubtext %></span></p>
