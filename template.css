@@ -1404,7 +1404,7 @@ p.more-assets a:hover {
             }
             .slim-header .top-bar .toggle-topbar.menu-icon {
                 z-index:999;
-                top:5px;
+                top:0;
                 margin-top:0;
             }
             .slim-header .top-bar .toggle-topbar.menu-icon a {
