@@ -259,10 +259,6 @@ ol.arrows {
     }
 }
 @media screen and (max-width:640px) {
-    #logo img {
-        margin-bottom:20px;
-        max-height:75px;
-    }
     #phone,
     #header-service-area p {
         text-align:center;
@@ -1378,7 +1374,8 @@ p.more-assets a:hover {
                 position:relative;
                 z-index:999999;
                 max-height:75px;
-                margin-bottom:20px;
+                max-width: 150px;
+                margin-bottom:15px;
             }
             .slim-header #nav-bar {
                 top:0;
