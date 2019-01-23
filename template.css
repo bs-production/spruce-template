@@ -1,6 +1,8 @@
 /**------------------------------------------- Structure Styles -------------------------------------------**/
-body {
+#template-wrap {
+    position: relative;
 }
+
 .row {
     max-width:1200px;
     position:relative;
