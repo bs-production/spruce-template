@@ -325,7 +325,7 @@ ul#top-nav-list ul.m-menu ul a:hover {
     @media screen and (min-width:1025px) {
         ul#top-nav-list ul.m-menu.short {
             min-width:300px;
-            width:300px;
+            width:unset;
             left:0;
         }
     }
