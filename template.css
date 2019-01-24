@@ -322,18 +322,16 @@ ul#top-nav-list ul.m-menu ul a:hover {
     text-decoration:none !important;
 }
 /* Nav Template 3 dropdown position fixes */
-    @media screen and (min-width:1025px) {
-        ul#top-nav-list ul.m-menu.short {
-            min-width:300px;
-            width:unset;
-            left:0;
-        }
+@media screen and (min-width:1025px) {
+    ul#top-nav-list ul.m-menu.short {
+        min-width:300px;
+        width:unset;
+        left:0;
     }
-    @media screen and (min-width:641px){
-        .top-bar-section li.has-dropdown:not(:first-of-type) {
-            position:relative;
-        }
+    .top-bar-section li.has-dropdown:not(:first-of-type) {
+        position:relative;
     }
+}
 /* Top Banner Sticky Phone # and Button*/
 .phone_link {
     font-size:26px;
