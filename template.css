@@ -1351,6 +1351,9 @@ p.more-assets a:hover {
             }
         }
         @media screen and (max-width:640px) {
+            #footer {
+                padding-bottom: 150px;
+            }
             #footer-links {
                 width:100%;
             }
