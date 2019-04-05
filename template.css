@@ -1319,15 +1319,20 @@ p.more-assets a:hover {
             float:left;
             width:250px;
         }
-        .footer-link.social a {
-            display:inline-block;
-            margin:0px 10px 10px 0px;
-            opacity:.75;
-            transition:opacity .2s ease;
+        /* Rounded background for social icons in footer - default grey scheme
+        #footer-links #social-footer-icons a {
+            background-color:#b0b0b0;
+            border-radius:50%;
+            width:34px;
+            height:34px;
+            padding-top:6px;
+            color:#373737;
+            transition:all 0.3s;
         }
-        .footer-link.social a:hover {
-            opacity:1;
-        }
+        #footer-links #social-footer-icons a:hover {
+            background-color:#fff;
+            color:#373737;
+        }*/
         @media screen and (min-width:1025px) {
             #footer-links,
              #footer-contact {
@@ -1352,7 +1357,7 @@ p.more-assets a:hover {
         }
         @media screen and (max-width:640px) {
             #footer {
-                padding-bottom: 150px;
+                padding-bottom:150px;
             }
             #footer-links {
                 width:100%;
@@ -1366,9 +1371,8 @@ p.more-assets a:hover {
                 width:auto !important;
                 text-align:center;
             }
-            li.footer-link.social a {
-                display:inline;
-                float:none;
+            #footer-links #social-footer-icons {
+                text-align:center;
             }
         }
         /* Slim mobile header */
