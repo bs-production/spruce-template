@@ -135,16 +135,115 @@ ul.checks,
 ol.checks,
 ul.arrows,
 ol.arrows {
-    padding:0px 20px !important;
+    padding:0px 20px;
+    margin:0 0 0 1.1rem;
+}
+ul.checks,
+ul.arrows{
     margin:0 0 0 1.1rem;
     list-style:none;
 }
-ul.checks,
-ol.checks,
-ul.arrows,
-ol.arrows {
-    margin:0 0 0 1.1rem;
-    list-style:none;
+/***------------ Numbered Checks ------------***/
+ol li:before {
+    color:#fff;
+    font-family:inherit;
+    background:<%= primaryBrightColor %>;
+    font-weight:700;
+    padding:2px 0;
+    width:27px;
+    height:27px;
+    border-radius:50px;
+    margin-left:-2.2em;
+    margin-top:0px;
+    font-size:1.05em;
+    line-height:1.3;
+    text-align:center;
+    float:left;
+    position:absolute;
+    text-shadow:0 1px 0 rgba(0,0,0,0.2);
+}
+ol .sub1,
+ol .sub2,
+ol .sub3,
+ol .sub4,
+ol .sub5,
+ol .sub6,
+ol .sub7,
+ol .sub8,
+ol .sub9,
+ol .sub10,
+ol .sub11,
+ol .sub12,
+ol .sub13,
+ol .sub14,
+ol .sub15,
+ol .sub16,
+ol .sub17,
+ol .sub18,
+ol .sub19,
+ol .sub20 {
+    padding:5px 0 10px 40px;
+    background-image:none !important;
+}
+ol .sub1:before {
+    content:"1";
+}
+ol .sub2:before {
+    content:"2";
+}
+ol .sub3:before {
+    content:"3";
+}
+ol .sub4:before {
+    content:"4";
+}
+ol .sub5:before {
+    content:"5";
+}
+ol .sub6:before {
+    content:"6";
+}
+ol .sub7:before {
+    content:"7";
+}
+ol .sub8:before {
+    content:"8";
+}
+ol .sub9:before {
+    content:"9";
+}
+ol .sub10:before {
+    content:"10";
+}
+ ol .sub11:before {
+    content:"11";
+}
+ol .sub12:before {
+    content:"12";
+}
+ol .sub13:before {
+    content:"13";
+}
+ol .sub14:before {
+    content:"14";
+}
+ol .sub15:before {
+    content:"15";
+}
+ol .sub16:before {
+    content:"16";
+}
+ol .sub17:before {
+    content:"17";
+}
+ol .sub18:before {
+    content:"18";
+}
+ol .sub19:before {
+    content:"19";
+}
+ol .sub20:before {
+    content:"20";
 }
 @media screen and (max-width:960px) {
     ul.left.arrows,
