@@ -377,8 +377,18 @@ ol .sub20:before {
  .contain-to-grid {
      background:<%= primaryDarkColor %>;
 }
-ul#top-nav-list > li:hover {
-     background:<%= primaryBrightColor %>;
+ul#top-nav-list > li:hover,
+ul#top-nav-list > li:focus-within:not(.quote),
+ul#top-nav-list > li.focus:not(.quote) {
+    background: <%= primaryBrightColor %>;
+}
+.top-bar-section .has-dropdown:focus-within>.dropdown,
+.top-bar-section .has-dropdown.focus>.dropdown{
+    display: block !important;
+}
+ul#top-nav-list > li:focus-within ul.m-menu ul a:focus,
+ul#top-nav-list > li.focus ul.m-menu ul a:focus {
+    outline: auto 5px -webkit-focus-ring-color;
 }
 ul#top-nav-list > li.quote:hover a{
     color:#fff;
