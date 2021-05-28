@@ -1,3 +1,8 @@
+:root {
+    --primary-dark-color: <%= primaryDarkColor %>;
+    --primary-bright-color: <%= primaryBrightColor %>;
+}
+
 /**------------------------------------------- Structure Styles -------------------------------------------**/
 #template-wrap {
     position: relative;
@@ -20,20 +25,20 @@ a,
  #tabs .ui-state-active a,
  #tabs .ui-state-active a:link,
  #tabs-light-bar .ui-widget-content a {
-     color:<%= primaryBrightColor %>;
+     color: var(--primary-bright-color);
 }
 a:visited {
     color:#222;
 }
 a:hover {
-     color:<%= primaryDarkColor %>;
+     color: var(--primary-dark-color);
 }
 /* Fixed Mobile Footer colors */
 #fixed-contact {
-    background:<%= primaryDarkColor %>;
+    background: var(--primary-dark-color);
 }
 #fixed-contact a {
-    color:<%= primaryBrightColor %>;
+    color: var(--primary-bright-color);
 }
 /**------------------------------------------- Font Styles -------------------------------------------**/
 body {
@@ -57,14 +62,14 @@ h1,
 #content-wrap h1,
  h1 {
     font-size:2.45em;
-     color:<%= primaryBrightColor %>;
+     color: var(--primary-bright-color);
     margin-bottom:20px;
     line-height:1.2;
 }
 #content-wrap h2,
  h2 {
     font-size:2.0em;
-     color:<%= primaryDarkColor %>;
+     color: var(--primary-dark-color);
     margin:0px auto 20px;
     font-weight:bold;
 }
@@ -74,18 +79,18 @@ h1,
 }
 #content-wrap h4,
  h4 {
-     color:<%= primaryDarkColor %>;
+     color: var(--primary-dark-color);
 }
 #content-wrap h5,
  h5 {
-     color:<%= primaryDarkColor %>;
+     color: var(--primary-dark-color);
 }
 .home h2,
  .home p.home-section-title {
     font:bold 2.0em/1.5 sans-serif;
     font-family:inherit;
     text-transform:uppercase;
-     color:<%= primaryDarkColor %>;
+     color: var(--primary-dark-color);
     text-align:center;
     margin-bottom:30px;
 }
@@ -96,7 +101,7 @@ h1,
     line-height:1.6;
 }
 ul.arrows li:before {
-    color:<%= primaryBrightColor %>;
+    color: var(--primary-bright-color);
     font-family:FontAwesome;
     content:"\f058";
     font-weight:900;
@@ -108,7 +113,7 @@ ul.arrows li:before {
     position:absolute;
 }
 ul.checks li:before {
-    color:<%= primaryBrightColor %>;
+    color: var(--primary-bright-color);
     font-family:FontAwesome;
     content:"\f14a";
     font-weight:900;
@@ -147,7 +152,7 @@ ul.arrows{
 ol li:before {
     color:#fff;
     font-family:inherit;
-    background:<%= primaryBrightColor %>;
+    background: var(--primary-bright-color);
     font-weight:700;
     padding:2px 0;
     width:27px;
@@ -291,7 +296,7 @@ ol .sub20:before {
     text-align:right;
 }
 #phone > a {
-    color:<%= primaryBrightColor %>;
+    color: var(--primary-bright-color);
     line-height:100%;
     font-weight:700;
     font-size:36px;
@@ -333,7 +338,7 @@ ol .sub20:before {
 .opensign {
     display:inline-block;
     vertical-align:middle;
-    background:<%= primaryBrightColor %>;
+    background: var(--primary-bright-color);
     border-radius:3px;
     padding:7px;
     margin:-5px 10px 0px 0px;
@@ -375,12 +380,12 @@ ol .sub20:before {
 /**------------------------------------------- TOP Nav Styles -------------------------------------------**/
 #nav-bar,
  .contain-to-grid {
-     background:<%= primaryDarkColor %>;
+     background: var(--primary-dark-color);
 }
 ul#top-nav-list > li:hover,
 ul#top-nav-list > li:focus-within:not(.quote),
 ul#top-nav-list > li.focus:not(.quote) {
-    background: <%= primaryBrightColor %>;
+    background:  var(--primary-bright-color);
 }
 .top-bar-section .has-dropdown:focus-within>.dropdown,
 .top-bar-section .has-dropdown.focus>.dropdown{
@@ -409,7 +414,7 @@ ul#top-nav-list > li.quote {
     background:#EDEDED;
 }
 ul#top-nav-list > li.quote a {
-     color:<%= primaryBrightColor %>;
+     color: var(--primary-bright-color);
 }
 ul#top-nav-list > li.quote:hover {
     background-color:#EB0209;
@@ -419,7 +424,7 @@ ul#top-nav-list > li.quote:hover {
         border-left-color: rgba(0,0,0,.5);
     }
     ul#top-nav-list > li.quote a {
-         background-color:<%= primaryBrightColor %>;
+         background-color: var(--primary-bright-color);
     }
 }
 /* Mega Nav Links */
@@ -427,7 +432,7 @@ ul#top-nav-list ul.m-menu a {
     color:#353535;
 }
 ul#top-nav-list ul.m-menu ul a:hover {
-     color:<%= primaryBrightColor %>;
+     color: var(--primary-bright-color);
     text-decoration:none !important;
 }
 /* Nav Template 3 dropdown position fixes */
@@ -448,13 +453,13 @@ ul#top-nav-list ul.m-menu ul a:hover {
 }
 #phone-sticky a.phone_link span,
  #phone-sticky a.phone_link:hover span {
-     color:<%= primaryBrightColor %>;
+     color: var(--primary-bright-color);
 }
 #phone-sticky a.button {
-     background:<%= primaryBrightColor %>;
+     background: var(--primary-bright-color);
 }
 #phone-sticky a.button:hover {
-     background:<%= primaryDarkColor %>;
+     background: var(--primary-dark-color);
 }
 .button:visited {
     color:#fff;
@@ -513,7 +518,7 @@ ul#top-nav-list ul.m-menu ul a:hover {
 }
 .cta-button {
     display:inline-block;
-     background-color:<%= primaryBrightColor %>;
+     background-color: var(--primary-bright-color);
     text-transform:uppercase;
     padding:1rem 2rem 1.0625rem 2rem;
     color:#fff;
@@ -661,14 +666,14 @@ ul#top-nav-list ul.m-menu ul a:hover {
 .service-item p.service-title {
     font-size:24px;
     margin:10px auto;
-     color:<%= primaryBrightColor %>;
+     color: var(--primary-bright-color);
 }
 .service-item a img {
     border:solid 4px #fefefe;
     transition:box-shadow 200ms ease-out;
 }
 .service-item a img:hover {
-     box-shadow:0 0px 0px 5px <%= primaryBrightColor %>;
+     box-shadow:0 0px 0px 5px  var(--primary-bright-color);
 }
 @media screen and (max-width:640px) {
     #services {
@@ -722,7 +727,7 @@ ul#top-nav-list ul.m-menu ul a:hover {
 }
 #choose-us div.choose-item i.fa {
     font-size:50px;
-     color:<%= primaryBrightColor %>;
+     color: var(--primary-bright-color);
     margin-bottom:20px;
 }
 #choose-us div.choose-item p {
@@ -759,7 +764,7 @@ p.more-assets {
 p.more-assets a {
     text-transform:uppercase;
     font-size:14px;
-     color:<%= primaryBrightColor %>;
+     color: var(--primary-bright-color);
     text-decoration:none !important;
     letter-spacing:.025em;
     transition:color .2s ease;
@@ -786,17 +791,17 @@ p.more-assets a:hover {
     padding:60px 0px;
 }
 #widgets a {
-     color:<%= primaryBrightColor %>;
+     color: var(--primary-bright-color);
     text-decoration:underline;
 }
 #widget-slider .widget-item .widget-img span {
     color:#fff !important;
     font:bold 20px/20px sans-serif;
     font-family:inherit;
-    background:<%= primaryDarkColor %> !important;
+    background: var(--primary-dark-color) !important;
 }
 #widget-slider .widget-item .widget-img span::after {
-     border-right:10px solid <%= primaryDarkColor %>;
+     border-right:10px solid  var(--primary-dark-color);
 }
 /***------------------------------------------- Homepage Customer Reviews -------------------------------------------***/
 #customers {
@@ -806,7 +811,7 @@ p.more-assets a:hover {
     padding:60px 0px;
 }
 #customers .review_item .review_preview a {
-     color:<%= primaryDarkColor %>;
+     color: var(--primary-dark-color);
 }
 /***-------------------------------------- Homepage Features ------------------------------------------------***/
 #hp-features {
@@ -844,12 +849,12 @@ p.more-assets a:hover {
     background-repeat:no-repeat;
     background-size:cover;
     background-position:center;
-     border-bottom:1px solid <%= primaryDarkColor %>;
+     border-bottom:1px solid  var(--primary-dark-color);
 }
 #silo-header::before {
     content:"";
     display:block;
-     background:<%= primaryDarkColor %>;
+     background: var(--primary-dark-color);
     opacity:.8;
     width:100%;
     height:100%;
@@ -974,7 +979,7 @@ p.more-assets a:hover {
 }
 /* Nav styles - first level - excludes top silo page */
 #subnav-left > ul > li > ul {
-     border-top:1px solid <%= primaryDarkColor %>;
+     border-top:1px solid  var(--primary-dark-color);
     padding-top:20px;
 }
 #subnav-left > ul ul li a {
@@ -1096,7 +1101,7 @@ p.more-assets a:hover {
         }
         a.button,
          a.arrow-button {
-             background:<%= primaryBrightColor %>;
+             background: var(--primary-bright-color);
             text-shadow:none;
             font:bold 20px/1.3em sans-serif;
             font-family:inherit;
@@ -1106,7 +1111,7 @@ p.more-assets a:hover {
         }
         a.button:hover,
          a.arrow-button:hover {
-             background:<%= primaryDarkColor %>;
+             background: var(--primary-dark-color);
         }
         a.arrow-button {
             padding:10px 70px 10px 20px !important;
@@ -1148,11 +1153,11 @@ p.more-assets a:hover {
         }
         /* Contact Form Colors */
         .contact_form .step.current .title {
-             background-color:<%= primaryDarkColor %>;
+             background-color: var(--primary-dark-color);
         }
         .contact_form button,
          input[type="submit"] {
-             background-color:<%= primaryBrightColor %>;
+             background-color: var(--primary-bright-color);
         }
         /* Tabbed interface */
         #carousel .ui-widget-header {
