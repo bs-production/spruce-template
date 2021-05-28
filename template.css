@@ -321,7 +321,7 @@ ol .sub20:before {
 #header-service-wrap {
     margin:0 auto 10px;
 }
-#header-service-area p {
+#header-service-area a {
     display:block;
     line-height:1.2em;
     text-align:right;
@@ -331,7 +331,7 @@ ol .sub20:before {
     font-weight:400;
     font-style:italic;
 }
-#header-service-area p:hover {
+#header-service-area a:hover {
     color:#353535;
     text-decoration:underline;
 }
